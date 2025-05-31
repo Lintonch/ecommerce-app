@@ -1,0 +1,22 @@
+# Ignore all target folders (build outputs)
+**/target/
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+
+# VSCode files
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# Maven Wrapper files
+.mvn/wrapper/maven-wrapper.jar
+
+# Compiled class files
+*.class
+

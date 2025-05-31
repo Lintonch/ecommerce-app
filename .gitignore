@@ -1,3 +1,25 @@
+# IDE files
+*.iml
+.idea/
+
+# OS files
+.DS_Store
+
+# Maven build folder
+target/
+
+# Compiled Java files
+*.class
+
+# VSCode files
+.vscode/
+
+# Log files
+*.log
+
+# Maven wrapper files
+.mvn/
+.mvn/wrapper/
 # Ignore all target folders (build outputs)
 **/target/
 

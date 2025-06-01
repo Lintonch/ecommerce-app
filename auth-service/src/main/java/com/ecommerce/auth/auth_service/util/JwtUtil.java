@@ -2,19 +2,21 @@ package com.ecommerce.auth.auth_service.util;
 
 import java.util.Date;
 
+import javax.crypto.SecretKey;
 
+import org.springframework.context.annotation.Configuration;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.JwtException;
-import org.springframework.stereotype.Component;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 
 
-
+@Configuration
 public class JwtUtil {
 	
-	private String jwtSecret = "secretKey"; // Use a more secure key for production
+	private final SecretKey jwtSecret = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+// Use a more secure key for production
     private int jwtExpirationMs = 86400000; // 1 day
 
     public String generateJwtToken(String username) {

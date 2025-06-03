@@ -1,4 +1,4 @@
-package com.ecommerce.auth.auth_service.model;
+package com.ecommerce.product_service.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,23 +9,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class User {
+public class Product {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	private String username;
-	
-	private String email;
-	
-	private String password;
-	
-	private Role role;
+	private String name;
 
 }
-
-
